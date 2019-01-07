@@ -1,0 +1,32 @@
+
+.example-card {
+  max-width: 400px;
+  max-height: 660px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+div#info {
+  position: absolute;
+  float: left;
+  top: 50px;
+  left: 80px;
+  width: 85%;
+  height: 100px;
+}
+
+.example-viewport {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.example-item-detail {
+  height: 300px;
+}
+
+.example-alternate {
+  background: rgba(127, 127, 127, 0.3);
+}

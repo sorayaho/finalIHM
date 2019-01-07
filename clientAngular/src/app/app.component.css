@@ -1,0 +1,32 @@
+/*-------------------------Menu-----------------------------*/
+.mat-toolbar {
+  background:#87CEEB;
+  color: #fff;
+}
+
+/*----------------------------------titre-------------------*/
+.title-center {
+  flex: 1 1 auto;
+  text-align: center;
+  color:#17202A;
+
+ }
+
+/*-----------Image qui représente le logo du cabinet------*/
+.img {
+  max-width:70%;
+  max-height:100%;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+/*------------------------Footer------------------------*/
+footer {
+  background-color: #87CEEB  ;
+}
+
+
+

@@ -1,0 +1,53 @@
+
+
+<!----------------------------------Affichage des informations personnelles de chaque patient du cabinet ------------------------------------->
+
+
+  <mat-grid-list cols="5"  rowHeight="220px">
+  <mat-grid-tile
+    *ngFor="let patient of cms.patients " [colspan]="1" [rowspan]="3">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div><img mat-card-avatar src="data/photos/anonyme.jpg" class="example-header-image"></div>
+        <mat-card-title> Informations personnelles du patient </mat-card-title>
+
+      </mat-card-header>
+
+      <mat-card-content>
+
+
+          <p>
+           <b> Nom et prénom :</b> {{getNom_Prenom(patient)}} <br>
+            <b>Sexe : </b>{{get_Sexe(patient)}} <br>
+              <b> Numéro Sécurité Sociale:</b> {{get_numSecuriteSociale(patient)}} <br>
+          </p>
+          <b> Adresse : </b>
+
+          <p>
+            <b>numéro: </b>{{getAdresse_numero(patient.adresse)}} <br>
+              <b> Rue : </b>{{patient.adresse.rue}} <br>
+                <b> étage:</b> {{get_etage(patient.adresse)}}<br>
+                  <b> Ville : </b> {{patient.adresse.ville}} <br>
+                    <b> Code Postal : </b> {{patient.adresse.codePostal}} <br>
+          </p>
+          <p>  <b>intervenant :</b> {{getInfirmier(patient)}}</p>
+        </mat-card-content>
+
+
+      <mat-card-actions>
+
+        <div routerLinkActive="active">
+          <div class="example-button-row">
+
+            <button mat-stroked-button color="primary"[routerLink]="[get_numSecuriteSociale(patient)]">Modifier patient </button> <br> <br><br>
+          </div>
+        </div>
+      </mat-card-actions>
+
+
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+

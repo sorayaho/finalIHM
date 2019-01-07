@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cabinet Médical de Grenoble </title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+
+<body>
+<!--------------------------menu des pages html qui contient le logo et le titre du cabinet --------------------------->
+  <mat-toolbar  class= "mat-toolbar"color="primary">  <img class="img" src="data/photos/cabinet.jpeg" alt="logo">
+    <span class="title-center"> CABINET MEDICAL DE GRENOBLE </span>
+
+
+    <!----------------------L'appel des pages html du projet par le routerLink------------------------------>
+
+    <div routerLinkActive="active" >  <a mat-raised-button  class="example-button-row" routerLink="accueil">Acceuil</a> </div>
+    <div routerLinkActive="active" >  <a mat-raised-button  class="example-button-row" routerLink="patient">Liste des patients</a> </div>
+    <div routerLinkActive="active" > <a mat-raised-button  class="example-button-row" routerLink="infirmier">Liste des infirmiers</a> </div>
+    <div routerLinkActive="active" >  <a mat-raised-button  class="example-button-row" routerLink="addpatient">Ajouter un patient</a> </div>
+    <div routerLinkActive="active" > <a mat-raised-button  class="example-button-row" routerLink="patientNonAffecte">Affecter les patients </a> </div>
+
+
+  </mat-toolbar>
+
+<router-outlet></router-outlet>
+</body>
+<!-----------------------------------------------------Footer des pages html --------------------------------->
+<footer>
+   <br><div class="row">
+    <div class="center-block" style="width:500px; color: #0000FF;">
+      <font size="5">
+        <!----------------- La barre de défilement de contexte du footer--------------------------------------->
+      <marquee id="id1">
+        <span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();" style="color:#17202A;">Réalisé par HOUSBANE Soraya</span><br>
+        <img class="logo-gmail" src="data/photos/logo-gmail.png" alt="logo-gmail" height="50" width="50">
+       <span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();" style="color:#17202A;">housbane.soraya1@gmail.com</span>
+      </marquee>
+      </font>
+
+    </div>
+  </div>
+</footer>
+
+
+</html>
+
+
+

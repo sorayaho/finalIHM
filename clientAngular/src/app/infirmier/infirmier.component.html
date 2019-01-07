@@ -1,0 +1,70 @@
+
+<!----------------------------Affichage des informations personnelles de chaque infirmier avec sa liste de patients ------------------------>
+
+  <mat-grid-list cols="3"  rowHeight="250px">
+    <mat-grid-tile
+
+      *ngFor="let infirmier of cms.infirmiers "
+      [colspan]="1"
+      [rowspan]="3">
+
+
+      <mat-card class="example-card" cols="1" rows="2">
+        <mat-card-header>
+          <div> <img mat-card-image src={{getPhoto(infirmier)}} alt="photo_infirmier"></div>
+          <mat-card-title> Informations personnelles de l'infirmier {{getNom_Prenom(infirmier)}} </mat-card-title> <br>
+        </mat-card-header>
+
+        <mat-card-content>
+          <b> Id: </b> {{getId(infirmier)}}
+          <b>Nom et prénom : </b> {{getNom_Prenom(infirmier)}}
+          <b> Adresse : </b>
+
+          <p>
+            <b>Numéro : </b> {{getAdresse_numero(infirmier.adresse)}}
+            <b>Rue :</b>   {{infirmier.adresse.rue}}
+            <b>Ville : </b>  {{infirmier.adresse.ville}}
+            <b>Code Postal : </b> {{infirmier.adresse.codePostal}} <br>
+          </p>
+          <cdk-virtual-scroll-viewport [itemSize]="20 * 7" class="example-viewport">
+          <h2>Liste des Patients : </h2>
+          <div *ngFor="let patient of infirmier.patients " >
+
+            <p>
+              <b>  Nom et prénom : </b> {{getNom_Prenom(patient)}} <br>
+              <b>  Sexe : </b> {{get_Sexe(patient)}} <br>
+              <b>  Numéro Sécurité Sociale: </b> {{get_numSecuriteSociale(patient)}} <br>
+            </p>
+            <b> Adresse : </b>
+
+            <p>
+              <b> numéro: </b>{{getAdresse_numero(patient.adresse)}} <br>
+              <b> Rue :</b> {{patient.adresse.rue}}  <br>
+              <b>  étage:</b> {{get_etage(patient.adresse)}} <br>
+              <b> Ville : </b>  {{patient.adresse.ville}}  <br>
+              <b> Code Postal : </b> {{patient.adresse.codePostal}} <br>
+
+            </p>
+          </div>
+          </cdk-virtual-scroll-viewport>
+
+        </mat-card-content>
+
+      </mat-card>
+      <br>
+
+
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+
+<!----------------Ce formulaire permet de récupérer les informations du patient qu'on doit ajouter par la suite grace à la fonction Ajouter_Patient() --------->
+
+<body class="container">
+
+<div class="col-sm-8-col-sm-offset-2">
+<form  [formGroup]="PatientForm" (ngSubmit)="Ajouter_Patient()" >
+  <div class="form-group">
+  <br> <br><br> <label for="nom">Nom</label><br>
+  <input  type="text" id="nom"  formControlName="nom"><br><br>
+</div>
+
+  <div class="form-group">
+  <label for="prénom">Prénom</label><br>
+  <input  type="text" id="prénom"  formControlName="prénom"><br><br>
+  </div>
+
+  <div class="form-group">
+  <label for="sexe">Sexe :</label><br>
+  <select  type="text" id="sexe"  formControlName="sexe">
+    <option value="F">Femme</option>
+    <option value="H">Homme</option>
+  </select> <br><br>
+  </div>
+
+  <div class="form-group">
+  <label for="Date_naissance">Date de naissance</label><br>
+  <input  type="date" id="Date_naissance"  formControlName="Date_naissance"> <br> <br>
+  </div>
+
+  <div class="form-group">
+  <label for="numéroSécuritéSociale">Numéro de sécurité sociale </label> <br>
+  <input  type="number" id="numéroSécuritéSociale"  formControlName="numéroSécuritéSociale"> <br><br>
+  </div>
+
+  <p> <b> Adresse : </b>  </p>
+  <br>
+
+  <div class="form-group">
+  <label for="numéro">Numéro</label><br>
+  <input  type="number" id="numéro"  formControlName="numéro"> <br><br>
+  </div>
+
+  <label for="rue">Rue</label> <br>
+  <input  type="text" id="rue"  formControlName="rue"> <br><br>
+
+  <div class="form-group">
+  <label for="codePostal">Code Postal</label> <br>
+  <input  type="number" id="codePostal"  formControlName="codePostal"> <br> <br>
+  </div>
+
+  <div class="form-group">
+  <label for="ville">Ville</label> <br>
+<input  type="text" id="ville"  formControlName="ville"> <br> <br>
+  </div>
+
+  <div class="form-group">
+  <label for="étage">étage</label> <br>
+  <input  type="number" id="étage"  formControlName="étage"> <br> <br>
+  </div>
+
+
+  <button class="btn btn-primary" > Ajouter</button> <br> <br>
+
+
+</form>
+  <p class="text-danger"> {{errorMessage}}</p>
+</div>

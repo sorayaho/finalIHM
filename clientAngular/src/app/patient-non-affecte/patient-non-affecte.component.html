@@ -1,0 +1,78 @@
+
+
+<!------------------------------L'affichage des patients non affectés à un intervenant -------------------->
+
+<mat-grid-list cols="3"  rowHeight="220px">
+  <mat-grid-tile
+    *ngFor="let patient of cms.patientsNonAffectes "
+    [colspan]="1"
+    [rowspan]="3">
+
+      <mat-card class="example-card">
+        <br> <br> <mat-card-header>
+        <div><img mat-card-avatar src="data/photos/anonyme.jpg" class="example-header-image"></div>
+        <mat-card-title> Informations personnelles du patient </mat-card-title> <br>
+
+      </mat-card-header>
+
+        <br><br> <mat-card-content>
+
+        <p>
+          Nom et prénom : {{getNom_Prenom(patient)}} <br>
+          Sexe : {{get_Sexe(patient)}} <br>
+          Numéro Sécurité Sociale: {{get_numSecuriteSociale(patient)}} <br>
+        </p>
+        <b> Adresse : </b>
+
+        <p>
+          numéro: {{getAdresse_numero(patient.adresse)}} <br>
+          Rue : {{patient.adresse.rue}} <br>
+          étage: {{get_etage(patient.adresse)}}<br>
+          Ville :  {{patient.adresse.ville}} <br>
+          Code Postal : {{patient.adresse.codePostal}} <br>
+        </p>
+
+      </mat-card-content>
+
+
+        <mat-card-actions>
+
+          <div routerLinkActive="active">
+          <div class="example-button-row">
+
+            <button mat-stroked-button color="primary"[routerLink]="[get_numSecuriteSociale(patient)]">Affecter patient</button> <br> <br><br>
+          </div>
+          </div>
+
+
+        </mat-card-actions><br><br><br>
+
+
+      </mat-card> <br><br>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+<br> <br> <br> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+
+<!---------Formulaire qui permet de choisir un intervenant à un  patient non affecté ------------>
+
+<br><div class="row">
+  <div class="center-block" style="width:500px;">
+<div class="col-sm-8-col-sm-offset-2">
+  <form  [formGroup]="PatientForm" (ngSubmit)="AffecterPatient()" >
+
+    <br><br> <p>
+    <b> Numéro Sécurité Sociale: </b> {{NumSecuriteSocial}}  <br>
+  </p>
+
+
+  <div class="form-group">
+    <label for="intervenant">Intervenant:</label><br>
+    <select  type="text" id="intervenant"  formControlName="intervenant" >
+      <option *ngFor="let infirmier of cms.infirmiers" value="{{infirmier.id}}">{{getNom_Prenom(infirmier)}}</option>-->
+    </select> <br><br>
+  </div>
+
+  <button >Affecter</button> <br> <br>
+  </form>
+
+</div>
+  </div>
+</div>
